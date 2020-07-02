@@ -145,6 +145,8 @@ Selected Positions {data-icon=suitcase}
 position_data %>% print_section('positions')
 ```
 
+<br>
+
 Selected Projects {data-icon=chart-bar}
 --------------------------------------------------------------------------------
 
