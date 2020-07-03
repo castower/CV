@@ -53,8 +53,6 @@ Aside
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-
-
 - <i class="fa fa-envelope"></i>courtney.stowers@asu.edu
 - <i class="fa fa-github"></i> github.com/castower
 - <i class="fa fa-link"></i> [castower.github.io](https://castower.github.io/)
