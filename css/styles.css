@@ -71,7 +71,8 @@ sup {
 }
 
 .aside li::before {
-  position: relative;
+ /* position: relative; */
+  bottom: 10px;
   margin-left: -4.25pt;
   content: "• ";
 }
@@ -101,3 +102,7 @@ sup {
   width: 100%;
 }
 
+#disclaimer {
+  position: absolute;
+  bottom: 0px;
+}

@@ -1,7 +1,7 @@
 ---
-title: Courtney Stowers' Resume"
+title: "Courtney Stowers' Resume"
 author: Courtney Stowers
-date: "February 29, 2020"
+date: "July 29, 2020"
 output:
   pagedown::html_resume:
     css: ['css/custom_resume.css', 'css/styles.css', 'resume']
@@ -38,6 +38,7 @@ position_data <- read_csv('positions.csv') %>%
     section = case_when(
       section %in% c('research_positions', 'industry_positions', 'teaching_positions') ~ 'positions', 
       section %in% c('data_science_writings', 'by_me_press', 'data_science_videos', 'data_science_projects') ~ 'projects',
+      section %in% c('selected_courses') ~ 'courses',
       TRUE ~ section
     )
   ) 
@@ -53,13 +54,22 @@ Aside
 Contact {#contact}
 --------------------------------------------------------------------------------
 
+<i class="fa fa-envelope"></i> courtney.stowers@asu.edu <br>
+<i class="fa fa-github"></i> [github.com/castower](github.com/castower) <br>
+<i class="fa fa-link"></i> [castower.github.io](https://castower.github.io/) <br>
+<i class="fab fa-linkedin"></i> Visit my [LinkedIn Profile](https://www.linkedin.com/in/courtney-stowers/)
 
+
+```{r, eval=FALSE}
+Contact {#contact}
+--------------------------------------------------------------------------------
 
 - <i class="fa fa-envelope"></i>courtney.stowers@asu.edu
-- <i class="fa fa-github"></i> github.com/castower
+- <i class="fa fa-github"></i> [github.com/castower](github.com/castower)
 - <i class="fa fa-link"></i> [castower.github.io](https://castower.github.io/)
 
-
+Visit my [LinkedIn Profile](https://www.linkedin.com/in/courtney-stowers/)
+```
 
 Language Skills {#skills}
 --------------------------------------------------------------------------------
@@ -72,28 +82,32 @@ skills <- tribble(
   "Markdown",           3,
   "HTML",               2,
   "CSS",                1,
-  "SQL",                1
+  "SQL",                1,
+  "Python",             1
 )
 build_skill_bars(skills)
 ```
 
-
-
+```{r, eval=FALSE}
 Open Source Contributions {#open-source}
 --------------------------------------------------------------------------------
 
-All projects available at `github.com/castower/`
+All projects (including code for this CV!) available at [`github.com/castower/`](https://github.com/castower)
+```
 
-
-- `shinysense`: R package to use sensor data in Shiny apps
-- `tuftesque`: Hugo theme (behind LiveFreeOrDichotomize.com)
-- `slid3r`: D3 add-on for fully svg slider inputs
-
-
-More info {#more-info}
+Skills {#more-info}
 --------------------------------------------------------------------------------
 
-Visit [my website](https://castower.github.io/)
+**Programming and markup languages:** R, SQL, Python, HTML, CSS, Markdown
+
+**Data analytics, visualization, and version control software:** Tableau, RStudio, Stata, SPSS, Github
+
+**Office Suite Software:** Microsoft Office (Word, Excel, Powerpoint, Access), Google Drive
+
+**Graphic and Video Editing Software:** Canva, Gravit Designer, Adobe Illustrator, Inkscape, iMovie, Windows Movie Maker
+
+**WYSIWYG Web Software:** Weebly, Webs, Google Sites, Blogger, Github Pages
+
 
 
 Disclaimer {#disclaimer}
@@ -108,6 +122,7 @@ Last updated on `r Sys.Date()`.
 
 
 
+
 Main
 ================================================================================
 
@@ -115,7 +130,7 @@ Courtney Stowers {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
-intro_text <- "I am a graduate student studying [Program Evaluation and Data Analytics](https://ds4ps.org/ms-prog-eval-data-analytics/) at Arizona State University. Throughout the program, I have learned how to use to visualize and wrangle data related to a variety of public policy issues such as [community analytics and gentrification](https://rpubs.com/castower/sacneighborhoodchange), [child well-being](https://public.tableau.com/views/HED607HouseholdIncomeandChildWell-Being/Presentation?:display_count=y&:origin=viz_share_link), and [global inequality](https://castower.shinyapps.io/Code-Through-Project-Stowers/#section-introduction)."
+intro_text <- "I am a [Bluebonnet Data](https://www.bluebonnetdata.org/) Fellow and graduate student studying [Program Evaluation and Data Analytics](https://ds4ps.org/ms-prog-eval-data-analytics/) at Arizona State University. Throughout the program, I have learned how to visualize and wrangle data related to a variety of public policy issues such as [community analytics and gentrification](https://rpubs.com/castower/sacneighborhoodchange), [child well-being](https://public.tableau.com/views/HED607HouseholdIncomeandChildWell-Being/Presentation?:display_count=y&:origin=viz_share_link) and [global inequality](https://castower.shinyapps.io/Code-Through-Project-Stowers/#section-introduction). I also worked on a team project to evaluate the [effectiveness of tax credit programs](https://r-class.github.io/cpp-528-spr-2020-group-02/). I am currently seeking a full-time position that will allow me to continue using data science to effect positive change."
 
 
 cat(sanitize_links(intro_text))
@@ -132,14 +147,23 @@ position_data %>% print_section('education')
 
 
 
-Selected Positions {data-icon=suitcase}
+Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
 position_data %>% print_section('positions')
 ```
 
-Selected Projects {data-icon=chart-bar}
+
+
+Relevant Technical Courses {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+position_data %>% print_section('courses')
+```
+
+Relevant Projects {data-icon=chart-bar}
 --------------------------------------------------------------------------------
 
 
